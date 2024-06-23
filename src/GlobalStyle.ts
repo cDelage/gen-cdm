@@ -25,6 +25,13 @@ const GlobalStyle = createGlobalStyle`
         --color-gray-900: #0F172A;
         --color-gray-950: #020617;
 
+        --color-background : var(--color-gray-100);
+        --color-active : var(--color-gray-200);
+        --color-hover: var(--color-gray-300);
+        --color-border: var(--color-gray-300);
+
+
+        --space-block: 296px;
         --space-XXL: 48px;
         --space-XL: 32px;
         --space-large : 20px;

@@ -1,21 +1,22 @@
 export type Model = {
-    tables: Table[]
-}
+  tables: Table[];
+};
 
 export type Table = {
-    name: string,
-    fields: Field[]
-}
+  _id?: string;
+  name: string;
+  fields: Field[];
+};
 
 export type Field = {
-  name: string
-  type: FieldType
-  primaryKey: boolean
+  _id?: string;
+  name: string;
+  type: FieldType;
+  primaryKey: boolean;
   foreignKey?: {
-    table: string
-    reference: string
-  }
+    table: string;
+    reference: string;
+  };
+};
 
-}
-
-export type FieldType = 'string' | 'number' | 'date'
+export type FieldType = "string" | "number" | "date";

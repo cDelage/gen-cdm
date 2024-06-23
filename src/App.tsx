@@ -24,7 +24,7 @@ declare global {
       getProjectById: (id: string) => Promise<Project>;
       updateProject: (
         id: string,
-        updatedProject: Project
+        updatedProject: Partial<Project>
       ) => Promise<Partial<Project>>;
       deleteProject: (id: string) => Promise<number>;
       getAllProjects: () => Promise<Project[]>;

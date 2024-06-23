@@ -8,8 +8,8 @@ import ProjectNavigation from "../features/project/ProjectNavigation";
 
 const SidebarStyled = styled.aside`
   width: 300px;
-  border-right: 1px solid var(--color-gray-300);
-  background-color: var(--color-gray-100);
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-background);
   padding: 8px 0px;
   display: flex;
   flex-direction: column;

@@ -8,13 +8,13 @@ const ProjectTab = styled.div<{ $active: boolean }>`
   padding: var(--space-short);
   cursor: pointer;
   &:hover {
-    background-color: var(--color-gray-300);
+    background-color: var(--color-hover);
   }
 
   ${(props) =>
     props.$active &&
     css`
-      background-color: var(--color-gray-200);
+      background-color: var(--color-active);
     `}
 `;
 
