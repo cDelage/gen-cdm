@@ -4,7 +4,7 @@ import {
   useUpdateProject,
   useUpdateProjectLocal,
 } from "./ProjectQueries";
-import Loader from "./Loader";
+import Loader from "../../ui/Loader";
 
 const InputTitle = styled.input`
   font-size: 2rem;

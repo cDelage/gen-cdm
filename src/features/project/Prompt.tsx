@@ -1,11 +1,10 @@
-import styled from "styled-components";
 import { Column, Row } from "../../ui/Flexbox";
 import { IoSend } from "react-icons/io5";
 import { ICON_SIZE_MEDIUM, PROMPT_COLS, PROMPT_ROWS } from "../../ui/UiConstants";
 import { useState } from "react";
 import { useCreateProject } from "./ProjectQueries";
 import { useUserSettingsStore } from "../settings/UserSettingsStore";
-import Loader from "./Loader";
+import Loader from "../../ui/Loader";
 import { PromptArea } from "../../ui/PromptArea";
 
 

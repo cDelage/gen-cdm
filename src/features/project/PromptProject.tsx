@@ -1,7 +1,7 @@
 import { Row } from "../../ui/Flexbox";
 import { PromptArea } from "../../ui/PromptArea";
 import { PROMPT_COLS, PROMPT_ROWS } from "../../ui/UiConstants";
-import Loader from "./Loader";
+import Loader from "../../ui/Loader";
 import { useProjectById } from "./ProjectQueries";
 
 function PromptProject() {

@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { Table } from "../../../electron/types/Model.type";
-import { useFindActiveTableByParam } from "./ProjectQueries";
 import { useSearchParams } from "react-router-dom";
 import { useCallback } from "react";
+import { useFindActiveTableByParam } from "../project/ProjectQueries";
 
 const TableTabStyled = styled.div<{ $active: boolean }>`
   padding: var(--space-short);

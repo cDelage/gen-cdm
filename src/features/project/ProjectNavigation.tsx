@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { Column } from "../../ui/Flexbox";
-import Loader from "./Loader";
+import Loader from "../../ui/Loader";
 import { useGetAllProjects } from "./ProjectQueries";
 import { useNavigate, useParams } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useFindActiveTableByParam } from "./ProjectQueries";
+import { useFindActiveTableByParam } from "../project/ProjectQueries";
 
 const TableStyled = styled.div`
   padding: var(--space-short);
@@ -34,14 +34,13 @@ function Table() {
   return (
     <TableStyled>
       <div>
-        Table : <input value={name} />
+        Table : {name}
       </div>
       <table>
         <thead>
           <tr>
             <th>Name</th>
             <th>Type</th>
-            <th>Reference</th>
           </tr>
         </thead>
         <tbody>
@@ -49,10 +48,6 @@ function Table() {
             <tr key={field._id}>
               <td>{field.name}</td>
               <td>{field.type}</td>
-              <td>
-                {field.foreignKey &&
-                  `${field.foreignKey.table}.${field.foreignKey.reference}`}
-              </td>
             </tr>
           ))}
         </tbody>

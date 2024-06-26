@@ -1,5 +1,5 @@
 import { Node } from "reactflow";
-import TableNode from "./TableNode";
+import TableNode from "../CDM/TableNode";
 
 export const NODES_TYPES = {
   table: TableNode,
@@ -38,6 +38,6 @@ export const TEST_NODES : Node[]= [
         },
       ],
     },
-    position: { x: 0, y: 50 },
+    position: { x: 0, y: 0 },
   },
 ];

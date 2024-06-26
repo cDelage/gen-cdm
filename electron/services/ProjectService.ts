@@ -1,4 +1,5 @@
 import { db } from "../database";
+import { Relation } from "../types/Model.type";
 import { CreateProjectPayload, Project } from "../types/Project.type";
 import { runPrompt } from "./PromptService";
 import { generateUUID } from "./generateUUIDService";
@@ -18,15 +19,19 @@ export const createProject = async ({
 };
 
 const generateIdForTables = (project: Project): Project => {
+  const _id = generateUUID();
   return {
     ...project,
+    name: project.model?.modelName,
     model: {
+      _id,
+      modelName: project.model ? project.model.modelName : "",
       tables: project.model
         ? project.model.tables.map((table) => {
             const _id = generateUUID();
             return {
-              ...table,
               _id,
+              ...table,
               fields: table.fields.map((field) => {
                 const fieldId = generateUUID();
                 return {
@@ -35,6 +40,15 @@ const generateIdForTables = (project: Project): Project => {
                 };
               }),
             };
+          })
+        : [],
+      relations: project.model
+        ? project.model.relations.map((relation) => {
+            const _id = generateUUID();
+            return {
+              _id,
+              ...relation,
+            } as Relation;
           })
         : [],
     },

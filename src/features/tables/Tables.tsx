@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import Loader from "./Loader";
-import { useProjectById } from "./ProjectQueries";
+import Loader from "../../ui/Loader";
+import { useProjectById } from "../project/ProjectQueries";
 import TableTab from "./TableTab";
 import Table from "./Table";
 
 const TablesStyled = styled.div`
-  border: 1px solid var(--color-gray-300);
-  height: var(--space-block);
+  height: 100%;
   display: flex;
 `;
 
